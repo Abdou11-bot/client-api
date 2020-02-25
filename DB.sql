@@ -1,1 +1,0 @@
-SELECT * FROM gestionclientv2.client;
