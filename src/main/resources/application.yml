@@ -1,0 +1,31 @@
+
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    platform: mysql
+    hikari:
+      poolName: Hikari
+      auto-commit: true
+    url: jdbc:mysql://localhost:3306/GestionClientV2?createDatabaseIfNotExist=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: 12345678
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        jdbc:
+          time_zone: UTC
+
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2KB
+      max-file-size: 5MB
+      max-request-size: 7MB
+
+file.upload-dir: ./src/main/resources/static/uploads
+#C:/Users/lenovo/IdeaProjects/client-api/src/main/resources/static/uploads
+# spring.datasource.username = <yourUserName>
